@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> :: 추천 PC견적 ::</title>
+
+</head>
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script>
+
+//용도별 탭 화면 변경 (게임용 PC~~, 사무/가정용 PC~~)
+$.urlParam = function(name){
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+    if(results){
+        return results[1] || 0;
+    }
+}
+</script>
+<link href="/skin/shop/basic/css/common.css" rel=stylesheet>
+<div id="content" class="sub">
+	<div class="system_wrap">
+    	<div class="contains">	
+    		<div class="menu_area">
+        		<script>
+					function click_battle(){
+						document.getElementById("recommend_frame").contentWindow.document.body.innerHTML = "<img src='battleground.png'>";
+					}
+
+					function click_lol(){
+						document.getElementById("recommend_frame").contentWindow.document.body.innerHTML = "<img src='lol.png'>";
+					}
+
+					function click_overwatch(){
+						document.getElementById("recommend_frame").contentWindow.document.body.innerHTML = "<img src='overwatch.png'>";
+					}
+
+					function click_full3d(){
+						document.getElementById("recommend_frame").contentWindow.document.body.innerHTML = "<img src='full3d.png'>";
+					}
+
+					</script>
+
+
+
+<link rel="stylesheet" type="text/css" href="css/common.css">
+
+<body>
+	<div id="content" class="sub">
+	<div class="system_wrap">
+    	<div class="contains">	
+    		<div class="menu_area">
+        		
+<hr>
+
+<form>
+
+<div class="system_menu_wrap clear">
+	<input type="hidden" id="price" name="price" value="" data_obj="">
+	<input type="hidden" id="game" name="game" value="100" data_obj="">
+    <input type="hidden" id="ctgr" name="ctgr" value="" data_obj="">
+    <input type="hidden" id="ev_no" name="ev_no" value="" data_obj="">
+    <input type="hidden" id="order_by" name="order_by" value="C.pd_suggest desc,C.pd_sold desc">
+    	
+	<div class="price_ctgr">
+		<div class="tab">
+			<span>가격대별 추천컴퓨터</span>
+		</div>
+		<div class="contents clear">
+			<ul>
+								<li>
+					<a href="#" onclick="product_list('N','price','300000','599999',this); return false;">
+						<span>30~50 만</span>
+					</a>
+				</li>
+								<li>
+					<a href="#" onclick="product_list('N','price','600000','899999',this); return false;">
+						<span>60~80 만</span>
+					</a>
+				</li>
+								<li>
+					<a href="#" onclick="product_list('N','price','900000','1099999',this); return false;">
+						<span>90~100 만</span>
+					</a>
+				</li>
+								<li>
+					<a href="#" onclick="product_list('N','price','1100000','1499999',this); return false;">
+						<span>110~140 만</span>
+					</a>
+				</li>
+								<li>
+					<a href="#" onclick="product_list('N','price','1500000','2999999',this); return false;">
+						<span>150~200 만</span>
+					</a>
+				</li>
+								<li>
+					<a href="#" onclick="product_list('N','price','2999999','2147483647',this); return false;">
+						<span>200이상 </span>
+					</a>
+				</li>
+							</ul>
+		</div>
+	</div>
+	<div class="type_ctgr">
+				<ul class="tab clear">
+						<li class="on">게임용 PC</li>
+						<li>사무/가정용 PC</li>
+						<li>전문가용 PC</li>
+						<li></li>
+					</ul>
+		<div class="contents">
+			<div class="inner clear on">
+								<div class="imgframe">
+					<a href="#" class="btn prev"></a>
+					<a href="#" class="btn next"></a>
+        			<ul class="bnr_all">
+        				        				<li class="list">
+        					<a href="#" onclick="click_battle();" game="100" class="on">
+            					<img src="img/game2.png" data_img="" data_link="">
+        						<span>배틀그라운드</span>
+    						</a>
+        				</li>
+        				        				<li class="list">
+        					<a href="#" onclick="click_lol();" game="200">
+            					<img src="img/game1.png" data_img="" data_link="">
+        						<span>리그오브레전드</span>
+    						</a>
+        				</li>
+        				        				<li class="list">
+        					<a href="#" onclick="click_overwatch();" game="300">
+            					<img src="img/game3.png" data_img="" data_link="">
+        						<span>오버워치</span>
+    						</a>
+        				</li>
+        				        				<li class="list">
+        					<a href="#" onclick="click_full3d();" game="400">
+            					<img src="img/game4.png" data_img="" data_link="">
+        						<span>풀3D RPG</span>
+    						</a>
+        				
+        				        			</ul>
+				</div>
+    		</div>
+    		<div class="inner clear">
+    			    			<ul>
+    				    				<li>
+    					<a href="#" onclick="product_list('8750','ctgr','','',this); return false;" ctgr="8750">
+    						<img src="" data_img="" data_link="">
+    						<span>사무용 추천 견적</span>
+    					</a>
+    					
+    				</li>
+    				    				<li>
+    					<a href="#" onclick="product_list('7824','ctgr','','',this); return false;" ctgr="7824">
+    						<img src="" data_img="" data_link="">
+    						<span>가정용 추천 견적</span>
+    					</a>
+    					
+    				</li>
+    			
+    				    			</ul>
+    		</div>
+    		<div class="inner clear">
+    			    			<ul>
+    				    				<li>
+    					<a href="#" onclick="product_list('8722','ctgr','','',this); return false;" ctgr="8722">
+    						<img src="" data_img="" data_link="">
+    						<span>그래픽 디자인용</span>
+    					</a>
+    				</li>
+    				    				<li>
+    					<a href="#" onclick="product_list('8732','ctgr','','',this); return false;" ctgr="8732">
+    						<img src="" data_img="" data_link="">
+    						<span>영상 편집용</span>
+    					</a>
+    				</li>
+    			
+    				    			</ul>
+			</div>
+    		
+		</div>
+		
+	</div>
+</div>
+        		
+					<div class="">
+						<iframe src="./img/recommend_img/recommend_result.html" name="recommend_page" id="recommend_frame"scrolling="no"; width="100%"; height="400;">
+							<img src="img/battleground.png"></a></div>
+						</iframe>
+					
+					</div>
+				
+    		
+        		
+</div>
+    		</div>
+    	</div>
+    </div>
+</div>
+</form>
+
+<script type="text/javascript" src="js/common.js"></script>
+<script src="./js/basic.js"></script>
+</body>
+</html>
